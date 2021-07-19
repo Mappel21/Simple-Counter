@@ -8,8 +8,9 @@ import "bootstrap";
 //include your index.scss file into the bundle
 import "../styles/index.scss";
 
-//import your own components
-import { Home } from "./component/home.js";
+function SimpleCounter(props){
+    return(<p>Hello World</p>):
+}
 
 //render your react application
 ReactDOM.render(<Home />, document.querySelector("#app"));
