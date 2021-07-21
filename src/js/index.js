@@ -8,17 +8,22 @@ import "bootstrap";
 //include your index.scss file into the bundle
 import "../styles/index.scss";
 
-function SimpleCounter(props){
-    return(<div className="bigCounter">
-                <div className="calendar">
-                    <i class="far fa-clock"></i>
-                </div>
-                <div className="four"></div>
-                <div className="three"></div>
-                <div className="two"></div>
-                <div className="one"></div>
-    </div>):
+//import your own components
+// import { Home } from "./component/home.js";
+
+function SimpleCounter(props) {
+	return (
+		<div className="bigCounter">
+			<div className="calendar">
+				<i class="far fa-clock"></i>
+			</div>
+			<div className="four">0</div>
+			<div className="three">0</div>
+			<div className="two">0</div>
+			<div className="one">0</div>
+		</div>
+	);
 }
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+ReactDOM.render(<SimpleCounter />, document.querySelector("#app"));
