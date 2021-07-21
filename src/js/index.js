@@ -1,6 +1,7 @@
 //import react into the bundle
 import React from "react";
 import ReactDOM from "react-dom";
+import PropTypes from "prop-types";
 
 //include bootstrap npm library into the bundle
 import "bootstrap";
@@ -21,9 +22,14 @@ function SimpleCounter(props) {
 			<div className="three">{props.digitThree}</div>
 			<div className="two">{props.digitTwo}</div>
 			<div className="one">{props.digitOne}</div>
-		</div>
-	);
+		</div>);
 }
+SimpleCounter.propTypes = {
+    digitFour: PropTypes.number,
+    digitThree: PropTypes.number,
+    digitTwo: PropTypes.number,
+    digitOne: PropTypes.number,
+};
 
 let counter = 0;
 setInterval(function() {
